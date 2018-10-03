@@ -1,7 +1,9 @@
+#Obtaining Path from User
+path = input('Enter File Path Here (must be a .txt): ')
 #Initializing List
 nlist = []
 #Opening File
-rfile = open('random.txt', 'r')
+rfile = open(path, 'r')
 #Reading File
 for linefromfile in rfile:
     nlist.append(int(linefromfile))
@@ -12,6 +14,8 @@ max_nlist = max(nlist)
 sum_nlist = sum(nlist)
 len_nlist = len(nlist)
 avg_nlist = sum_nlist/len_nlist
+#Intro
+print('The following numbers were read from the file:')
 #Printing Numbers in List
 for i in range (len_nlist):
     print(nlist[i])
